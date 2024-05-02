@@ -7,7 +7,7 @@ This factor is proportional to (1 + r)^(1/12), where r is the yearly interest ra
 For simplification, let (1 + r) ^ (1/12) = exp(1/12 * ln(1 + r)) =: D_r.
 
 The Swedish taxes on the ISK is based on a weighted average of capital in each quarter so
-YT = (S_3 + S_6 + S_9 + S_12) / 4 * s_r * s, where s_r is the schablo factor and s is the tax rate.
+YT = (S_1 + S_4 + S_7 + S_10) / 4 * s_r * s, where s_r is the schablo factor and s is the tax rate.
 The growth in earnings is quite simple as it is revised each year as
 E^1 = E,
 E^{i+1} = E^i * (1 + r_e) = E * (1 + r_e)^i, where the ^ indicates indices over the years.
@@ -22,7 +22,7 @@ It is easier to define with recursion with the final step being applying taxes d
 S_{i+1}^j  = S_i^j * D_rs + (E^j-F_i^j) - YT^j * I(i==12)
 
 Once a person decides to retire, E = 0, but the savings are still gaining interest after the fees and taxes are paid.
-Let YT*^j = (S*_3 + S*_6 + S*_9 + S*_12) / 4 * s_r * s, represent taxes on the remaining savings.
+Let YT*^j = (S*_1 + S*_4 + S*_7 + S*_10) / 4 * s_r * s, represent taxes on the remaining savings.
 
 S*_{i+1}^j = S*_i^j * D_rs - F_i^j - YT*^j * I(i==12), here j defines the number of years after retirement instead of years spent working. 
 
